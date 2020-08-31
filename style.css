@@ -1,0 +1,629 @@
+/*::::::::::::::::::::::::::Général:::::::::::::::::::::::::::::::*/
+body{
+    font-family: 'Audiowide', cursive;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+a{
+    color: white;
+    Text-decoration: none; 
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+
+
+/*:::::::::::::::::::::::::::::HEADER:::::::::::::::::::::::::::::::::*/
+
+header{
+    width: 100%;   
+}
+header img{
+    width: 100%;
+}
+
+/*::::::::::::::::::::::::::::::NAV:::::::::::::::::::::::::::::::::::::*/
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    z-index: 200;
+}
+nav #left{
+    background-color: rgb(44, 44, 44);
+    width: 0%;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+nav #right img{
+    width: 100%;
+}
+nav #right{
+    background-color: gray;
+    height: 20px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#menu{
+    width: 100%;
+}
+/*::::*/
+
+nav li {
+    background: linear-gradient(90deg, rgb(131, 131, 131), black);
+    text-align: center;
+    border: solid 1px white;
+    border-radius: 10px 10px 0px 10px ;
+    -webkit-border-radius: 10px 10px 0px 10px ;
+    -moz-border-radius: 10px 10px 0px 10px ;
+    -ms-border-radius: 10px 10px 0px 10px ;
+    -o-border-radius: 10px 10px 0px 10px ;
+}
+#menu>li{
+    margin: 2%;
+    width: 80%;
+}
+nav #left h2{
+    margin: 10%;
+    font-size: 80%;
+}
+nav #menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sousmenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+}
+nav #menu #planete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+/*::::::::::::::::::::::::::MAIN::::::::::::::::::::::::::::::::::*/
+main{
+    display: flex;
+}
+/*:::::::::consigne :::::::::::::*/
+#consigne{
+    width: 30%;
+    font-size: 80%;
+    display: none;
+}
+#consigne .titre{
+    background-color: gray;
+    width: 100%;
+    margin: 1% ;
+    border-radius: 10px 10px 10px 10px ;
+    -webkit-border-radius: 10px 10px 10px 10px ;
+    -moz-border-radius: 10px 10px 10px 10px ;
+    -ms-border-radius: 10px 10px 10px 10px ;
+    -o-border-radius: 10px 10px 10px 10px ;
+}
+#consigne p{
+    display: none;
+}
+/*:::::::::main acc::::::::::::::::*/
+#mainPAcceuil{
+    justify-content: space-around;
+}
+#mainAcceuil{
+    text-align: center;
+    margin-bottom: 3%;
+    width: 100%;
+
+}
+#mainAcceuil #top{
+    position: relative;
+}
+#mainAcceuil #imgMain{
+    width: 100%;
+    position: relative;
+}
+#mainAcceuil #top h2{
+    font-size: 120%; 
+    position: absolute; 
+    top: 0;
+    width: 100%;
+}
+#mainAcceuil #bottom ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+#mainAcceuil #bottom ul li{
+    width: 100%;
+}
+#mainAcceuil #bottom ul li img{
+    width: 100%;
+}
+
+#mainAcceuil #bottom ul li h3{
+    font-size: 80%;
+    text-decoration: underline;
+}
+
+#mainAcceuil #cosmonaute{
+    position: absolute;
+    display: none;
+    top: 50%;
+}
+/*:::::::::::::::::::::::::::::PRESENTATION:::::::::::::::::::*/
+#presentation{
+    margin: 2%;
+}
+#presentation article p{
+    margin: 0;
+    font-size: 110%;
+
+}
+#presentation #video{
+    margin-top: 10%;
+    
+}
+#presentation #video h2{
+    text-align: center;
+    font-size: 150%;
+}
+#video #source{
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+#video #source iframe{
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/*::::::::::::::::::::::::LESGEANTE::::::::::::::::::::::::::*/
+/*::::OPO*/
+#popUpfond{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.781);
+    z-index: 250;
+}
+.popUp{
+    display: none;
+    background-image: url(img/ciel.jpg);
+    background-size: 100%;
+    border: solid rgba(255, 255, 255, 0.561) 5px;
+    border-radius: 50px;
+    margin: 5% auto;
+    width: 70%;
+    height: 70vH;
+}
+#popUp2{
+    display: block;
+}
+.topPopUp{
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+
+}
+.topPopUp img{
+    width: 8%;
+}
+.topPopUp .bouton{
+    background-color: black;
+    border: solid rgba(255, 255, 255, 0.561) 1px;
+    border-radius: 5px;
+    height: 20px;
+    padding: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.topPopUp .bouton p{
+    margin: 0;
+}
+.bottomPopUp p {
+    margin: 2%;
+}
+
+/*::::::::::LISTE PLANETE*/
+#listeSection {
+    text-align: center;
+    width: 100%;
+}
+#listePlanetes{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 50vh;
+    overflow: hidden;
+}
+#listePlanetes li{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin: 3%;
+    width: 30%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+#listePlanetes li:hover{
+    width: 35%;
+}
+
+#jupiter{
+    width: 100%;
+}
+#saturne{
+    width: 100%;
+}
+#uranus{
+    width: 60%;
+}
+#neptune{
+    width: 60%;
+}
+/*:::::::::::::::::::::::SYTHEM::::::::::::::::::::::::::::::*/
+/*;:::::::::::::::left::::::::::::*/
+#mainSit {
+    display: flex;
+    width: 100%;
+}
+#mainSit #left {
+    margin: 3%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mainSit #left h2{
+    font-size: 100%;
+    text-align: center;
+}
+#mainSit #left ul{
+    width: 30%;
+}
+#mainSit #left li{
+    width: 100%;
+    margin: 10% 0% 10% 0%;
+}
+#mainSit #left li button{
+    width: 100%;
+    color: white;
+    background-color: gray;
+}
+#mainSit #left #reset{
+    margin-top: 30%;
+}
+/*::::::::::::::RIGHT::::::::::::::::::*/
+#mainSit #right {
+    margin: 3%;
+    width: 70%;
+    z-index: 250;
+}
+#mainSit #right ul{
+    display: flex;
+    align-items: center;
+}
+/*:::::::::::::::::::SYTHEME:::::::::::::::::::*/
+#mainSit #soleilS{
+    margin: 5%;
+}
+#mainSit #mercureS{
+    margin: 2%;
+    transform-origin: 250px 0%;
+    rotate: 0deg;
+}
+#mainSit #venusS{
+    transform-origin: 300px 0%;
+    rotate: 0deg;
+    margin: 1%;
+}
+#mainSit #terreS{
+    transform-origin: 350px 0%;
+    margin: 1%;
+    rotate: 0deg;
+}
+#mainSit #marsS{
+    transform-origin: 450px 0%;
+    rotate: 0deg;
+    margin: 10%;
+}
+/*::::::::::::::::::::::::::::CONTACT:::::::::::::::::::::::::*/
+#contact{
+    width: 98%;
+    margin: 1%;
+    font-size: 80%;
+}
+
+#topContact h2{
+    font-size: 100%;
+    text-align: center;
+}
+#topContact form ul li{
+    display: flex;
+    flex-direction: column;
+}
+#topContact form ul li>label{
+    width: 30%;
+}
+#topContact form legend{
+    width: 30%;
+}
+#topContact form input{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+#buttonForm{
+    margin: 5% 2%;
+    display: flex;
+}
+
+#topContact #date{
+    width: 30%;
+}
+#topContact form #Pjointe{
+    display: none;
+}
+/*:::::::::::::::::::::::::::::MAP::::::::::::::::::::::::::::::::::::*/
+#contactBottom{
+    text-align: center;
+    margin: 5%;
+}
+
+/*:::::::::::::::::::::::::::::FOOTER:::::::::::::::::::::::::::::::::*/
+footer{
+    background-image: url(img/footer.jpg);
+    font-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    box-shadow:  0px  5px 5px  white inset;
+
+}
+footer ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1%;
+    width: 100%;
+    align-items: center;
+}
+
+footer ul #border{
+    width: 33%;
+    border-right: solid 2px white;
+    border-left: solid 2px white;
+}
+
+/*::::::::::::::::::::::::::VERTION PC:::::::::::::::::::::::::::*/
+
+@media only screen and (min-width: 800px) {
+/*:::::::::::::::::::::::::::::general:::::::::::::::::::::::::::*/
+#wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+/*:::::::::::::::::::::::::::::NAV:::::::::::::::::::::::::::::::::*/
+nav{
+    position: relative;
+    top: auto;
+    width: 100%;
+    display: flex;
+    
+}
+nav #left{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+nav #right{
+    display: none;
+}
+nav h2{
+    display: none;
+}
+/*::::*/
+nav #menu {
+    flex-direction: row;
+}
+nav #menu #planete{
+    display: inline-block;
+}
+nav #menu .sousmenu{
+    width: 20%;
+    margin: 2px;
+    display: none;
+}
+.sousmenu>li{
+    width: 100%;
+    margin: 2px auto;  
+}
+
+/*:::::::::::::::::::::::::::::MAIN:::::::::::::::::::::::::::::::::*/
+#consigne{
+    display: block;
+}
+#mainAcceuil{
+    width: 80%;
+}
+#mainAcceuil #top h2{
+    font-size:120%;  
+}
+/*mainnnn acc::::::::::::::::::*/
+#mainPAcceuil{
+    justify-content: space-around;
+}
+#mainAcceuil{
+    width: 60%;
+    border: solid 1px white;
+    box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.986);
+}
+#mainAcceuil #bottom ul li:hover{
+    position: relative;
+    rotate: 18deg;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+#mainAcceuil #cosmonaute{
+    position: absolute;
+    display: flex;
+    right: 200px;
+    top: 50px;
+    rotate: -25deg;
+    animation: cosmonaute 7s infinite;
+    -webkit-animation: cosmonaute 7s infinite;
+}
+
+#cosmonaute p{
+    display: none;
+}
+@keyframes cosmonaute {
+    0% {right: 200px;width: 100px; font-size:20px; }
+    50% {right: 800px;width: 0px;font-size:0px;}
+    100% {right: 200px; width: 100px; font-size:20px;}
+    
+}
+
+/*:::::::::::::::::::::::::::MAIN PRE :::::::::::::::::::::::::::::::*/
+#presentation{
+    display: flex;
+}
+#presentation article{
+    width: 30%;
+}
+#presentation #video{
+    width: 70%;
+    border: solid 1px white;
+    box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.986);
+    margin-top: 0%;
+}
+
+/*::::::::::::::::::::::::::CONTACT:::::::::::::::::::::::::::::::::::*/
+#contact{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+#contact #topContact{
+    margin: 5%;   
+}
+form ul{
+    font-size: 120%;
+}
+#contact #topContact h2{
+    margin-bottom: 5%;
+    font-size: 150%;
+}
+#topContact form ul li{
+    flex-direction: row;
+    
+}
+#topContact form ul li input{
+    width: 70%;
+}
+#topContact form ul li textarea{
+    width: 70%;
+}
+#contact #bottomContact{
+    width: 30%;
+}
+#sexe{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#topContact form ul li #sexe #sexetype{
+    display: flex;
+    align-items: center;
+   
+}
+#topContact form #Pjointe{
+    display: flex;
+    justify-content: space-between;
+}
+#topContact form #message{
+    display: flex;
+    align-items: end;
+}
+#topContact form #buttonForm{
+    display: flex;
+    margin: 0;
+    margin-left: 39%;
+}
+#topContact form #buttonForm input{
+    margin: 1%;
+}
+
+/*::::::::::::::::::::::::::MAP::::::::::::::::::::::::::::::::::::::*/
+#contactBottom{
+    overflow: hidden;
+    width: 30%;
+}
+#map{
+    position: relative;
+    right: -100%;
+    width: 100%;
+    transition: 2s;
+    
+}
+#contactBottom:hover>#map{
+    right: 0%;
+    
+}
+/*:::::::::::::::::::::::::::::FOOTER:::::::::::::::::::::::::::::::::*/
+    footer{
+        background-size: 100%; 
+        padding: 0;
+        font-size: 120%;
+        box-shadow:  0px  0px 0px  white inset;
+    }
+}
